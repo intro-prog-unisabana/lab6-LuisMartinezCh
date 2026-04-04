@@ -8,3 +8,5 @@ def employee_print(employee_info):
 
     if len(employee_info) < 3:
         print("No other info!")
+    if len(employee_info) == 0:
+        print("Name: N/A")

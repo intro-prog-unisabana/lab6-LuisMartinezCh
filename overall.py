@@ -3,14 +3,15 @@ def student_averages(students):
     for student, data in students.items():
         average_std = sum(data.values()) / len(data)
         averages[student] = round(average_std)
-    print(averages)
+    return averages
 
 def assignment_averages(students):
+    if not students:
+        return {}
     averages = {}
-    for homework in students["s1"].keys():
+    for homework in next(iter(students.values())).keys():
         total = 0
         for student, data in students.items():
             total += data[homework]
-        average_hw = total / len(students)
-        averages[homework] = round(average_hw)
-    print(averages)
+        averages[homework] = round(total / len(students))
+    return averages
