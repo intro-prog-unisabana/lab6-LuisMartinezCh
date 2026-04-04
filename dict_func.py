@@ -1,7 +1,5 @@
 # Write your code here!
-employee_info = {}
-
-def employee_print(employee_info={"Name": None, "Salary": None, "Role": None}):
+def employee_print(employee_info):
     
     if not employee_info:
         employee_info = {"Name": None, "Salary": None, "Role": None}
@@ -14,5 +12,3 @@ def employee_print(employee_info={"Name": None, "Salary": None, "Role": None}):
     
     if len(employee_info) <= 3:
         print("No other info!")
-
-employee_print(employee_info)
